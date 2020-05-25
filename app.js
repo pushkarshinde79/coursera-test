@@ -1,7 +1,7 @@
 (function(){
 //'use strict'
 //var x = "hello";
-var stringLength=0;
+//var stringLength=0;
 
 angular.module('myFirstApp',[])
 
