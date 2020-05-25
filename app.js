@@ -14,18 +14,18 @@ function myFirstController($scope)
    $scope.totalLength=0;
    $scope.msg = "";
 
-   $scope.displayLength = function(){
-     var totalStringLength = 1; //calculateStringLength($scope.name);
-     $scope.totalLength = totalStringLength;
-     if($scope.totalLength <= 3)
-     {
-       $scope.msg = "Enjoy !";
-     }
-     if($scope.totalLength > 3)
-     {
-       $scope.msg = "Too much !";
-     }
-   };
+   // $scope.displayLength = function(){
+   //   var totalStringLength = 1; //calculateStringLength($scope.name);
+   //   $scope.totalLength = totalStringLength;
+   //   if($scope.totalLength <= 3)
+   //   {
+   //     $scope.msg = "Enjoy !";
+   //   }
+   //   if($scope.totalLength > 3)
+   //   {
+   //     $scope.msg = "Too much !";
+   //   }
+   // };
  //function calculateStringLength(string){
 //      var tokens = string.split(',');
   //    stringLength = tokens.length;
