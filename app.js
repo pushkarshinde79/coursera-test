@@ -5,8 +5,8 @@
 
 angular.module('myFirstApp',[])
 
-.controller ('myFirstController',myFirstController);
-//myFirstController.$inject = [$scope];
+.controller ('myFirstController',[myFirstController]);
+myFirstController.$inject = [$scope];
 function myFirstController($scope)
 {
 
