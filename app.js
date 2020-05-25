@@ -25,8 +25,6 @@ function myFirstController($scope)
      {
        $scope.msg = "Too much !";
      }
-}
-
 
  //function calculateStringLength(string){
 //      var tokens = string.split(',');
@@ -38,5 +36,5 @@ function myFirstController($scope)
   //  return stringLength;
 
   //};
-
+}
 })();
