@@ -37,9 +37,6 @@ function myFirstController($scope)
     //  }
   //  return stringLength;
 
-  //}
-
-};
-
+  //};
 
 })();
