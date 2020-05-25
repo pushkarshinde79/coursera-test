@@ -25,7 +25,7 @@ function myFirstController($scope)
      {
        $scope.msg = "Too much !";
      }
-
+}
 
 
  function calculateStringLength(string){
@@ -38,7 +38,7 @@ function myFirstController($scope)
     return stringLength;
 
   }
-}
+
 }
 
 
