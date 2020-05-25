@@ -6,7 +6,7 @@ var stringLength=0;
 angular.module('myFirstApp',[])
 
 .controller ('myFirstController',myFirstController);
-myFirstController.$inject = [$scope];
+//myFirstController.$inject = [$scope];
 function myFirstController($scope)
 {
 
