@@ -15,7 +15,7 @@ function myFirstController($scope)
    $scope.msg = "";
 
    $scope.displayLength = function(){
-     var totalStringLength = calculateStringLength($scope.name);
+     var totalStringLength = 1; //calculateStringLength($scope.name);
      $scope.totalLength = totalStringLength;
      if($scope.totalLength <= 3)
      {
@@ -28,16 +28,16 @@ function myFirstController($scope)
 }
 
 
- function calculateStringLength(string){
-      var tokens = string.split(',');
-      stringLength = tokens.length;
-      if(stringLength == 1 && tokens[0] == "")
-      {
-          stringLength--;
-      }
-    return stringLength;
+ //function calculateStringLength(string){
+//      var tokens = string.split(',');
+  //    stringLength = tokens.length;
+    //  if(stringLength == 1 && tokens[0] == "")
+      //{
+        //  stringLength--;
+    //  }
+  //  return stringLength;
 
-  }
+  //}
 
 };
 
