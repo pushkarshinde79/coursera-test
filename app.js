@@ -1,6 +1,8 @@
 (function () {
 'use strict';
 
+var stringLength=0;
+
 angular.module('DIApp', [])
 .controller('DIController', DIController);
 
