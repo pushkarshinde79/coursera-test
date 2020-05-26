@@ -12,9 +12,14 @@ function DIController($scope, $filter) {
 
   $scope.displayLength = function(){
   //  var totalStringLength = 1 ;calculateStringLength($scope.name);
-    $scope.totalLength = = function () {
-      var upCase = $filter('uppercase');
-      $scope.name = upCase($scope.name);
+
+      var tokens = string.split(',');
+      stringLength = tokens.length;
+      if(stringLength == 1 && tokens[0] == "")
+      {
+          stringLength--;
+      }
+      $scope.totalLength = stringLength;
     };
     if($scope.totalLength <= 3)
     {
