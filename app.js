@@ -14,24 +14,24 @@ function DIController($scope, $filter) {
 
   $scope.displayLength = function(){
   //  var totalStringLength = 1 ;calculateStringLength($scope.name);
-      var string = $scope.name;
-      var tokens = string.split(',');
-      stringLength = tokens.length;
-      if(stringLength == 1 && tokens[0] == "")
-      {
-          stringLength--;
-      }
-      $scope.totalLength = stringLength;
-
-    if($scope.totalLength <= 3)
-    {
-      $scope.msg = "Enjoy !";
-    }
-    if($scope.totalLength > 3)
-    {
-      $scope.msg = "Too much !";
-    }
-    $scope.msg = "Hi" + $scope.totalLength;
+    //   var string = $scope.name;
+    //   var tokens = string.split(',');
+    //   stringLength = tokens.length;
+    //   if(stringLength == 1 && tokens[0] == "")
+    //   {
+    //       stringLength--;
+    //   }
+    //   $scope.totalLength = stringLength;
+    //
+    // if($scope.totalLength <= 3)
+    // {
+    //   $scope.msg = "Enjoy !";
+    // }
+    // if($scope.totalLength > 3)
+    // {
+    //   $scope.msg = "Too much !";
+    // }
+    $scope.msg = "Hi";
 };
   // $scope.upper = function () {
   //   var upCase = $filter('uppercase');
