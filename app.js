@@ -10,26 +10,26 @@ function DIController($scope, $filter) {
   $scope.totalLength=0;
   $scope.msg = "1";
 
-  $scope.displayLength = function(){
-  //  var totalStringLength = 1 ;calculateStringLength($scope.name);
-
-      var tokens = string.split(',');
-      stringLength = tokens.length;
-      if(stringLength == 1 && tokens[0] == "")
-      {
-          stringLength--;
-      }
-      $scope.totalLength = stringLength;
-
-    if($scope.totalLength <= 3)
-    {
-      $scope.msg = "Enjoy !";
-    }
-    if($scope.totalLength > 3)
-    {
-      $scope.msg = "Too much !";
-    }
-};
+//   $scope.displayLength = function(){
+//   //  var totalStringLength = 1 ;calculateStringLength($scope.name);
+//
+//       var tokens = string.split(',');
+//       stringLength = tokens.length;
+//       if(stringLength == 1 && tokens[0] == "")
+//       {
+//           stringLength--;
+//       }
+//       $scope.totalLength = stringLength;
+//
+//     if($scope.totalLength <= 3)
+//     {
+//       $scope.msg = "Enjoy !";
+//     }
+//     if($scope.totalLength > 3)
+//     {
+//       $scope.msg = "Too much !";
+//     }
+// };
   // $scope.upper = function () {
   //   var upCase = $filter('uppercase');
   //   $scope.name = upCase($scope.name);
