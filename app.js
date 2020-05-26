@@ -20,7 +20,7 @@ function DIController($scope, $filter) {
           stringLength--;
       }
       $scope.totalLength = stringLength;
-    };
+
     if($scope.totalLength <= 3)
     {
       $scope.msg = "Enjoy !";
@@ -29,7 +29,7 @@ function DIController($scope, $filter) {
     {
       $scope.msg = "Too much !";
     }
-
+};
   // $scope.upper = function () {
   //   var upCase = $filter('uppercase');
   //   $scope.name = upCase($scope.name);
