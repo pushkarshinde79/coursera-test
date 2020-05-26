@@ -8,7 +8,7 @@ DIController.$inject = ['$scope', '$filter'];
 function DIController($scope, $filter) {
   $scope.name = "";
   $scope.totalLength=0;
-  $scope.msg = "";
+  $scope.msg = "1";
 
   $scope.displayLength = function(){
   //  var totalStringLength = 1 ;calculateStringLength($scope.name);
