@@ -14,7 +14,7 @@ function DIController($scope, $filter) {
 
   $scope.displayLength = function(){
   //  var totalStringLength = 1 ;calculateStringLength($scope.name);
-
+      var string = $scope.name;
       var tokens = string.split(',');
       stringLength = tokens.length;
       if(stringLength == 1 && tokens[0] == "")
