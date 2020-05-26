@@ -6,7 +6,7 @@ angular.module('DIApp', [])
 
 DIController.$inject = ['$scope', '$filter'];
 function DIController($scope, $filter) {
-  $scope.name = "";
+  $scope.name = "abc";
   $scope.totalLength=0;
   $scope.msg = "1";
 
