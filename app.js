@@ -29,6 +29,7 @@ function DIController($scope, $filter) {
     {
       $scope.msg = "Too much !";
     }
+    $scope.msg = "Hi" + $scope.totalLength;
 };
   // $scope.upper = function () {
   //   var upCase = $filter('uppercase');
