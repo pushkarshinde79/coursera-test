@@ -8,9 +8,9 @@ angular.module('DIApp', [])
 
 DIController.$inject = ['$scope', '$filter'];
 function DIController($scope, $filter) {
-  $scope.name = "abc";
+  $scope.name = "";
   $scope.totalLength=0;
-  $scope.msg = "4";
+  $scope.msg = "";
 
   $scope.displayLength = function(){
       var string = $scope.name;
