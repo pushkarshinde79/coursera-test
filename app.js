@@ -11,8 +11,11 @@ function DIController($scope, $filter) {
   $scope.msg = "";
 
   $scope.displayLength = function(){
-    var totalStringLength = 1 ;calculateStringLength($scope.name);
-    $scope.totalLength = totalStringLength;
+  //  var totalStringLength = 1 ;calculateStringLength($scope.name);
+    $scope.totalLength = = function () {
+      var upCase = $filter('uppercase');
+      $scope.name = upCase($scope.name);
+    };
     if($scope.totalLength <= 3)
     {
       $scope.msg = "Enjoy !";
@@ -22,10 +25,10 @@ function DIController($scope, $filter) {
       $scope.msg = "Too much !";
     }
 
-  $scope.upper = function () {
-    var upCase = $filter('uppercase');
-    $scope.name = upCase($scope.name);
-  };
+  // $scope.upper = function () {
+  //   var upCase = $filter('uppercase');
+  //   $scope.name = upCase($scope.name);
+  // };
 }
 
 })();
