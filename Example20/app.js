@@ -29,7 +29,7 @@ function ShoppingListCheckOffService() {
     { name: "milk", quantity: 7 },
     { name: "chips", quantity: 5 },
     { name: "soda", quantity: 6 },
-    { name: "Final Fantasy XV", quantity: 1 }];
+    { name: "chocolate", quantity: 1 }];
 
   var boughtItems = [];
 
