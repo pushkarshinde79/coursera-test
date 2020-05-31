@@ -1,6 +1,26 @@
 (function () {
 'use strict';
 
+var shoppingList2 = [
+  {
+    name: "Milk",
+    quantity: "2"
+  },
+  {
+    name: "Donuts",
+    quantity: "200"
+  },
+  {
+    name: "Cookies",
+    quantity: "300"
+  },
+  {
+    name: "Chocolate",
+    quantity: "5"
+  }
+];
+
+
 angular.module('ShoppingListApp', [])
 .controller('ShoppingListAddController', ShoppingListAddController)
 .controller('ShoppingListShowController', ShoppingListShowController)
