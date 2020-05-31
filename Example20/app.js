@@ -30,7 +30,7 @@ ShoppingListAddController.$inject = ['ShoppingListService'];
 function ShoppingListAddController(ShoppingListService) {
   var itemAdder = this;
 
-  $itemAdder.shoppingList2 = shoppingList2;
+  itemAdder.shoppingList2 = shoppingList2;
 
   itemAdder.itemName = "";
   itemAdder.itemQuantity = "";
