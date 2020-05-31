@@ -26,9 +26,11 @@ angular.module('ShoppingListApp', [])
 .controller('ShoppingListShowController', ShoppingListShowController)
 .service('ShoppingListService', ShoppingListService);
 
-ShoppingListAddController.$inject = ['ShoppingListService'];
-function ShoppingListAddController(ShoppingListService) {
+ShoppingListAddController.$inject = ['$scope','ShoppingListService'];
+function ShoppingListAddController($scope,ShoppingListService) {
   var itemAdder = this;
+
+  $scope.shoppingList2 = shoppingList2;
 
   itemAdder.itemName = "";
   itemAdder.itemQuantity = "";
