@@ -8,15 +8,17 @@
     <title>Custom Service 1</title>
   </head>
   <body>
-    <h1>Custom Service</h1>
+    <h1>Custom Service 1</h1>
     <div ng-controller='ShoppingListAddController as itemAdder'>
       <!-- <input type="text" ng-model="itemAdder.itemName" placeholder="item name">
       <input type="text" ng-model="itemAdder.itemQuantity" placeholder="quantity"> -->
 
       <ul>
-          <li ng-repeat="item in shoppingList2">Buy {{item.quantity}} of {{item.name}}(s)</li>
+          <li ng-repeat="item in shoppingList2">Buy {{item.quantity}} of {{item.name}}
             <button ng-click="showList.addItem($index);">Bought</button>
-        </ul> -->
+          </li>
+
+        </ul>
 
       <!-- <button ng-click="itemAdder.addItem();">Add Item To Shopping List</button> -->
     </div>
