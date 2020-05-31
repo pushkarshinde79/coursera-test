@@ -26,11 +26,11 @@ angular.module('ShoppingListApp', [])
 .controller('ShoppingListShowController', ShoppingListShowController)
 .service('ShoppingListService', ShoppingListService);
 
-ShoppingListAddController.$inject = ['$scope','ShoppingListService'];
-function ShoppingListAddController($scope,ShoppingListService) {
+ShoppingListAddController.$inject = ['ShoppingListService'];
+function ShoppingListAddController(ShoppingListService) {
   var itemAdder = this;
 
-  $scope.shoppingList2 = shoppingList2;
+  $itemAdder.shoppingList2 = shoppingList2;
 
   itemAdder.itemName = "";
   itemAdder.itemQuantity = "";
@@ -43,8 +43,8 @@ function ShoppingListAddController($scope,ShoppingListService) {
 }
 
 
-ShoppingListShowController.$inject = ['ShoppingListService'];
-function ShoppingListShowController(ShoppingListService) {
+ShoppingListShowController.$inject = ['$scope','ShoppingListService'];
+function ShoppingListShowController($scope,ShoppingListService) {
   var showList = this;
 
   showList.items = ShoppingListService.getItems();
