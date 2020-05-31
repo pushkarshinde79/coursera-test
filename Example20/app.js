@@ -1,82 +1,49 @@
 (function () {
 'use strict';
 
+angular.module('ShoppingListCheckOff', [])
+.controller('ToBuyController', ToBuyController)
+.controller('AlreadyBoughtController', AlreadyBoughtController)
+.service('ShoppingListCheckOffService', ShoppingListCheckOffService)
 
-
-angular.module('ShoppingListApp', [])
-.controller('ShoppingListAddController', ShoppingListAddController)
-.controller('ShoppingListShowController', ShoppingListShowController)
-.service('ShoppingListService', ShoppingListService);
-
-ShoppingListAddController.$inject = ['ShoppingListService'];
-function ShoppingListAddController(ShoppingListService) {
-  var itemAdder = this;
-
-  var shoppingList2 = [
-    {
-      name: "Milk",
-      quantity: "2"
-    },
-    {
-      name: "Donuts",
-      quantity: "200"
-    },
-    {
-      name: "Cookies",
-      quantity: "300"
-    },
-    {
-      name: "Chocolate",
-      quantity: "5"
-    }
-  ];
-
-
-  itemAdder.shoppingList2 = shoppingList2;
-
-  itemAdder.itemName = "";
-  itemAdder.itemQuantity = "";
-
-  itemAdder.addItem = function (itemIndex) {
-     itemAdder.itemName = shoppingList2.items[$index].name;
-     itemAdder.itemQuantity = shoppingList2.items[$index].quantity;
-    ShoppingListService.addItem(itemAdder.itemName,itemAdder.itemQuantity);
-  }
-}
-
-
-ShoppingListShowController.$inject = ['$scope','ShoppingListService'];
-function ShoppingListShowController($scope,ShoppingListService) {
-  var showList = this;
-
-  showList.items = ShoppingListService.getItems();
-
-  showList.removeItem = function (itemIndex) {
-    ShoppingListService.removeItem(itemIndex);
+ToBuyController.$inject = ['ShoppingListCheckOffService'];
+function ToBuyController(ShoppingListCheckOffService) {
+  var toBuy = this;
+  toBuy.items = ShoppingListCheckOffService.getToBuyItems();
+  toBuy.buy = function(index) {
+    ShoppingListCheckOffService.buyItem(index);
   };
 }
 
+AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
+function AlreadyBoughtController(ShoppingListCheckOffService) {
+  var bought = this;
+  bought.items = ShoppingListCheckOffService.getBoughtItems();
 
-function ShoppingListService() {
+}
+
+function ShoppingListCheckOffService() {
   var service = this;
+  var toBuyItems = [
+    { name: "cookies", quantity: 10 },
+    { name: "milk", quantity: 7 },
+    { name: "chips", quantity: 5 },
+    { name: "soda", quantity: 6 },
+    { name: "Final Fantasy XV", quantity: 1 }];
 
-  // List of shopping items
-  var items = [];
+  var boughtItems = [];
 
-  service.addItem = function (itemName, quantity) {
-    var item = {
-      name: itemName,
-      quantity: quantity
-    };
-    items.push(item);
+  service.buyItem = function(index) {
+    boughtItems.push(toBuyItems[index]);
+    toBuyItems.splice(index, 1);
   };
 
-  service.removeItem = function (itemIndex) {
-    items.splice(itemIndex, 1);
+  service.getToBuyItems = function () {
+    return toBuyItems;
   };
 
-  service.getItems = function () {
-    return items;
+  service.getBoughtItems = function () {
+    return boughtItems;
   };
 }
 
