@@ -35,10 +35,10 @@ function ShoppingListAddController($scope,ShoppingListService) {
   itemAdder.itemName = "";
   itemAdder.itemQuantity = "";
 
-  itemAdder.addItem = function () {
-    itemAdder.itemName = shoppingList2.items[$index].itemName;
-    itemAdder.itemQuantity = shoppingList2.items[$index].itemQuantity;
-    ShoppingListService.addItem(itemAdder.itemName, itemAdder.itemQuantity);
+  itemAdder.addItem = function (itemIndex) {
+     itemAdder.itemName = shoppingList2.items[$index].itemName;
+     itemAdder.itemQuantity = shoppingList2.items[$index].itemQuantity;
+    ShoppingListService.addItem(itemAdder.itemName,itemAdder.itemQuantity);
   }
 }
 
